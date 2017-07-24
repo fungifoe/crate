@@ -1,6 +1,11 @@
 public class Position {
+
     private int x;
     private int y;
+
+    private int s = 32;
+    private int maxY = 320 - (320/10);
+    private int maxX = 160 - (160/5);
 
     /**
      * Skapar en position
@@ -15,32 +20,32 @@ public class Position {
             throw new IllegalArgumentException("Invalid position: y");
         }
 
-        this.x = x;
-        this.y = y;
+        this.x = (x-1) * s;
+        this.y = (y-1) * s;
     }
 
     /**
      * Minskar x-position med 1
      */
     public void moveLeft(){
-        if(x != 1)
-            x -= 1;
+        if(x != 0)
+            x -= s;
     }
 
     /**
      * Ökar x-position med 1
      */
     public void moveRight(){
-        if(x != 5)
-            x += 1;
+        if(x != maxX)
+            x += s;
     }
 
     /**
      * Ökar y-position med 1
      */
     public void moveDown(){
-        if(y != 10)
-            y += 1;
+        if(y != maxY)
+            y += s;
     }
 
     public int getX(){
@@ -50,5 +55,4 @@ public class Position {
     public int getY(){
         return y;
     }
-
 }
