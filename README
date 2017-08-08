@@ -1,2 +1,21 @@
-Fight the box!!
+Leta upp där du vill lägga spelmappen och skapa den:
+*mkdir FightTheBox
 
+Flytta till mappen och initiera mappen:
+*cd FightTheBox
+*git init
+
+Länka den till "crate repositoryn" (Borde vara rätt länk annars får du gå in och kopiera den på github):
+*git remote add origin https://github.com/fungifoe/crate.git
+*git pull origin master
+
+Borde vara klart men min klagade på att mapparna inte stämde överens, då får manistället skriva:
+*git pull --allow-unrelated-histories origin master
+
+För att lägga upp filer:
+*git add BoxExempel.txt
+*git commit -m 'Lagt till exempel fil'
+*git push -u origin master
+
+För att uppdatera mappen:
+*git pull origin master
