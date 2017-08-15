@@ -1,0 +1,4 @@
+* Musik
+* Uppdatera storleken så det eventuellt funkar till mobilt? Borde isf ta reda på vad för storlek som då krävs
+* Skins eller annan ”affär”
+* Typ bättre tick-metod?
